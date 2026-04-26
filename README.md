@@ -6,10 +6,11 @@ A atividade foi pensada para ser concluída em até 1h no laboratório, usando V
 
 ## Informações Gerais
 
-- Nome:
-- Matricula:
+- Nome: Iale Leles de Almeida
+- Matricula: 927707
 
 ## Print da listagem de títulos, cáculo das médias, resumo das checagens (some e every)
-
+![alt text](printtelafunçõesprincipais.png)
 
 ## Print da pagina mostrando o resumo dentro da div#output
+![alt text](printtelamostrandodiv#output.png)
