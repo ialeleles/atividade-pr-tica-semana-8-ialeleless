@@ -91,3 +91,40 @@ if(resultado) {
 } else {
     console.log("Nenhum item com a nota maior ou igual a 9");
 };
+
+// Agregação com reduce
+
+// Média das notas do catálogo
+const soma = catalogo.reduce((acumulador, item) => {
+    return acumulador + item.nota;
+}, 0);
+
+const media = soma / catalogo.length;
+console.log(media.toFixed(2));
+
+// Média dos assistidos do catálogo 
+const assistidos = catalogo.filter(item => item.assistido);
+const somaAssistidos = assistidos.reduce((acc, item) => acc + item.nota, 0);
+
+const mediaAssistidos = somaAssistidos / assistidos.length;
+console.log(mediaAssistidos.toFixed(2));
+
+// Verifica se existe algum item com lançamento antes dos anos 2000
+const lancamentosAntesDe2000 = catalogo.some(item => item.ano < 2000);
+console.log(lancamentosAntesDe2000) 
+
+if (lancamentosAntesDe2000) {
+    console.log("Existe item lançado antes de 2000.");
+} else {
+    console.log("Nenhum item foi lançado antes de 2000.");
+}
+
+// Verifica se todos os itens do catálogo possuem pelo menos um gênero
+const quantidadeGeneros = catalogo.every(item => item.generos.length > 0)
+console.log(quantidadeGeneros)
+
+if (quantidadeGeneros) {
+    console.log("Todos os itens possuem pelo menos um gênero.");
+} else {
+    console.log("Existe item sem gênero.");
+}
