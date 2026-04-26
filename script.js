@@ -58,3 +58,15 @@ const catalogo = [
 
 console.log(catalogo)
 
+// Título do primeiro item
+console.log(catalogo[0].titulo);
+
+// Ano do último item
+console.log(catalogo[catalogo.length -1].ano)
+
+// O segundo gênero do terceiro item (quando existir)
+if (catalogo[2].generos[1]) {
+    console.log(catalogo[2].generos[1]);
+} else {
+    console.log("Esse item possui apenas um gênero.");
+}
