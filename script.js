@@ -128,3 +128,31 @@ if (quantidadeGeneros) {
 } else {
     console.log("Existe item sem gênero.");
 }
+
+// DOM - Saída na tela
+const output = document.getElementById("output");
+
+const total = catalogo.length;
+const filmes = catalogo.filter(item => item.tipo === "filme").length;
+const series = catalogo.filter(item => item.tipo === "serie").length;
+const naoAssistidosQuantidade = catalogo.filter(item => !item.assistido).length;
+const mediaGeral = (
+    catalogo.reduce((acc, item) => acc + item.nota, 0) / catalogo.length
+).toFixed(2);
+const ranking = catalogo
+    .slice()
+    .sort((a, b) => b.nota - a.nota)
+    .slice(0, 3);
+
+output.innerHTML = `
+<p>Total: ${total}</p>
+<p>Filmes: ${filmes}</p>
+<p>Séries: ${series}</p>
+<p>Não assistidos: ${naoAssistidosQuantidade}</p>
+<p>Média: ${mediaGeral}</p>
+
+<p>Top 3:</p>
+<ul>
+    ${ranking.map(item => `<li>${item.titulo} - ${item.nota}</li>`).join("")}
+</ul>
+`;
