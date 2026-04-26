@@ -70,3 +70,24 @@ if (catalogo[2].generos[1]) {
 } else {
     console.log("Esse item possui apenas um gênero.");
 }
+
+// Lista todos os títulos no console
+catalogo.forEach(item => {
+    console.log(`- [${item.tipo}] ${item.titulo} (${item.ano})`);
+});
+// Transformação contendo apenas títulos em maiúsculo
+const titulosEmCaixaAlta = catalogo.map(item => item.titulo.toUpperCase());
+console.log(titulosEmCaixaAlta)
+
+// Novo array (naoAssistidos)
+const naoAssistidos = catalogo.filter(item => item.assistido === false);
+console.log(naoAssistidos.length);
+
+// Busca com find
+const resultado = catalogo.find(item => item.nota >= 9);
+
+if(resultado) {
+    console.log(resultado.titulo + " - " + resultado.nota);
+} else {
+    console.log("Nenhum item com a nota maior ou igual a 9");
+};
