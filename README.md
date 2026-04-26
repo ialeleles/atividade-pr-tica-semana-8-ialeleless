@@ -11,6 +11,3 @@ A atividade foi pensada para ser concluída em até 1h no laboratório, usando V
 
 ## Print da listagem de títulos, cáculo das médias, resumo das checagens (some e every)
 ![alt text](printtelafunçõesprincipais.png)
-
-## Print da pagina mostrando o resumo dentro da div#output
-![alt text](<Captura de tela 2026-04-26 182153.png>)
